@@ -52,6 +52,9 @@ import yvUSDT from "@/abis/tokensAbi/yvUSDT";
 import yvUSDC from "@/abis/tokensAbi/yvUSDC";
 import USDT from "@/abis/tokensAbi/USDT";
 
+import myMIM from "@/abis/tokensAbi/myMIM";
+import myWETH from "@/abis/tokensAbi/myWETH";
+
 export default {
   ALCX,
   MIM,
@@ -106,4 +109,6 @@ export default {
   yvUSDT,
   yvUSDC,
   USDT,
+  myMIM,
+  myWETH,
 };
