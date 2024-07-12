@@ -1,10 +1,10 @@
 import { next, ipAddress } from "@vercel/edge";
 import { Ratelimit } from "@upstash/ratelimit";
 
-import { kv } from "@vercel/kv";
+import { createClient } from "@vercel/kv";
 
 const ratelimit = new Ratelimit({
-  redis: kv({
+  redis: createClient({
     url: import.meta.env.KV_REST_API_URL,
     token: import.meta.env.KV_REST_API_TOKEN,
   }),
