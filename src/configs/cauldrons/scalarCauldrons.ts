@@ -14,7 +14,7 @@ const mimInfo = {
 const config: Array<CauldronConfig> = [
   {
     icon: useImage(`assets/images/tokens/WBTC.png`),
-    name: "SBTC",
+    name: "sBTC",
     chainId: 11155111,
     id: 1,
     liquidationFee: 6,
@@ -42,7 +42,7 @@ const config: Array<CauldronConfig> = [
       abi: poolsAbi.scalarCauldronV4,
     },
     collateralInfo: {
-      name: "SBTC",
+      name: "sBTC",
       decimals: 18,
       address: "0xa32e5903815476Aff6E784F5644b1E0e3eE2081B",
       abi: tokensAbi.sBTC,
