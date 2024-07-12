@@ -19,8 +19,8 @@
         </div>
 
         <ArbitrumBlock />
-
-        <CauldronsCarousel />
+        <!-- TODO -->
+        <!-- <CauldronsCarousel /> -->
 
         <CauldronsTable
           :cauldrons="cauldrons"
