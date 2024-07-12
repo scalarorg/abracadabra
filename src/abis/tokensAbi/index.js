@@ -52,8 +52,9 @@ import yvUSDT from "@/abis/tokensAbi/yvUSDT";
 import yvUSDC from "@/abis/tokensAbi/yvUSDC";
 import USDT from "@/abis/tokensAbi/USDT";
 
-import myMIM from "@/abis/tokensAbi/myMIM";
-import myWETH from "@/abis/tokensAbi/myWETH";
+import SCL from "@/abis/tokensAbi/scalarCoin";
+import myWETH from "@/abis/tokensAbi/scalarWETH";
+import sBTC from "@/abis/tokensAbi/scalarSBTC";
 
 export default {
   ALCX,
@@ -109,6 +110,7 @@ export default {
   yvUSDT,
   yvUSDC,
   USDT,
-  myMIM,
+  SCL,
   myWETH,
+  sBTC,
 };

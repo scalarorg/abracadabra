@@ -1,7 +1,7 @@
 import { BigNumber } from "ethers";
 import type { Address } from "viem";
 import lensAbi from "@/abis/marketLens.js";
-import myLensAbi from "@/abis/myMarketLens.js";
+import myLensAbi from "@/abis/scalarMarketLens.js";
 import type { MainParams } from "@/helpers/cauldron/types";
 import { getPublicClient } from "@/helpers/chains/getChainsInfo";
 import { getLensAddress } from "@/helpers/cauldron/getLensAddress";
