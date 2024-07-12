@@ -4,7 +4,10 @@ import { Ratelimit } from "@upstash/ratelimit";
 import { kv } from "@vercel/kv";
 
 const ratelimit = new Ratelimit({
-  redis: kv,
+  redis: kv({
+    url: import.meta.env.KV_REST_API_URL,
+    token: import.meta.env.KV_REST_API_TOKEN,
+  }),
   // 5 requests from the same IP in 10 seconds
   limiter: Ratelimit.slidingWindow(5, "10 s"),
 });
@@ -22,5 +25,7 @@ export default async function middleware(request) {
 
   return success
     ? next()
-    : Response.redirect(new URL("https://www.youtube.com/watch?v=dQw4w9WgXcQ", request.url));
+    : Response.redirect(
+        new URL("https://www.youtube.com/watch?v=dQw4w9WgXcQ", request.url)
+      );
 }
