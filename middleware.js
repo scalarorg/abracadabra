@@ -1,13 +1,10 @@
 import { next, ipAddress } from "@vercel/edge";
 import { Ratelimit } from "@upstash/ratelimit";
 
-import { createClient } from "@vercel/kv";
+import kv from "@vercel/kv";
 
 const ratelimit = new Ratelimit({
-  redis: createClient({
-    url: import.meta.env.KV_REST_API_URL,
-    token: import.meta.env.KV_REST_API_TOKEN,
-  }),
+  redis: kv,
   // 5 requests from the same IP in 10 seconds
   limiter: Ratelimit.slidingWindow(5, "10 s"),
 });
