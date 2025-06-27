@@ -6,7 +6,7 @@ import { initStaticJsonRpcProvider } from "@/helpers/chains/initStaticJsonRpcPro
 
 const rpcList = filterRpcUrls(arbitrum, [
   "https://arbitrum-one.publicnode.com",
-  "https://arbitrum.llamarpc.com",
+  //"https://arbitrum.llamarpc.com",
   "https://1rpc.io/arb",
   "https://arbitrum-one.public.blastapi.io",
 ]);
